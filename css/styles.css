@@ -217,6 +217,17 @@ header {
   .bottom-footer_container {
     font-size: 10px;
     color: var(--grey);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .social-icons {
+    font-size: 1.5em;
+  }
+
+  .social-icons>* {
+    margin: 0 5px;
   }
 
 
