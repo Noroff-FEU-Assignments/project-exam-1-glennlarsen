@@ -1,7 +1,8 @@
-const url = "https://foreverabroad.flopow.eu/wp-json/wp/v2/posts?per_page=9";
+const url = "https://foreverabroad.flopow.eu/wp-json/wp/v2/posts?per_page=13&_embed";
 
-//const productsContainer = document.querySelector(".grid_container");
-//const youMayAlsoLikeContainer = document.querySelector(".grid_container2");
+const body = document.querySelector("body");
+const container = document.querySelector(".container");
+const carousel = document.querySelector(".carousel__track");
 
 async function getPosts() {
   try {
@@ -9,16 +10,26 @@ async function getPosts() {
 
     const post = await response.json();
 
-    //createHtml(post);
+    createHtml(post);
 
     console.log(post);
 
 
   } catch (error) {
-    productsContainer.innerHTML = displayError(
+    container.innerHTML = displayError(
       "An error occured when calling the API"
     );
   }
 }
 
+
+
 getPosts();
+
+function createHtml(post) {
+
+ 
+
+
+};
+

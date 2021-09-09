@@ -1,0 +1,62 @@
+/*Global links*/
+a {
+  text-decoration: none;
+  color: grey;
+  font-family: var(--link), Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: capitalize;
+}
+
+/*Navigation Links*/
+li a {
+  font-family: var(--text-heading), Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0 20px;
+  padding: 20px 0;
+  display: block;
+  font-size: larger;
+}
+
+nav a:hover {
+  transition: 0.3s;
+  transform: scaleY(1.5);
+}
+
+.active {
+  text-decoration: underline;
+}
+
+/*Buttons*/
+
+.cta {
+  font-family: var(--text-pharagraph-and-buttons);
+  color: var(--dark-orange);
+  font-weight: bold;
+  background: transparent;
+  border: 3px solid var(--dark-orange);
+  border-radius: 6px;
+  padding: 1em;
+}
+
+.cta-white {
+  color: white;
+  border-color: white;
+}
+
+.cta-footer {
+  background: white;
+  border: white;
+  color: var(--grey);
+  width: 100%;
+}
+
+/*Footer*/
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links a {
+  color: white;
+  font-size: 1.1em;
+  line-height: 2.5;
+}

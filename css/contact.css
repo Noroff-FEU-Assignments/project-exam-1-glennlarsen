@@ -1,0 +1,5 @@
+/*Header Image*/
+header {
+    background: url(../images/contact/contact.jpg) center, no-repeat;
+    background-size: cover;
+  }

@@ -1,0 +1,5 @@
+/*Header Image*/
+header {
+    background: url(../images/accommodation/accommodation.jpg) center, no-repeat;
+    background-size: cover;
+  }
