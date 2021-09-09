@@ -29,6 +29,7 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
 }
 
 .carousel__track-container {
@@ -51,6 +52,30 @@ header {
   top: 0;
   bottom: 0;
   width: 100%;
+}
+
+.slide__overlay {
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  height: 170px;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+}
+
+.slide__overlay h3, .slide__overlay p {
+  position: absolute;
+  z-index: 101;
+  color: white;
+  font-size: 2em;
+  margin-left: 20px;
+  top: -18px;
+}
+
+.carousel__slide p {
+  top: 113px;
+  font-size: 1em;
+  color: var(--dark-orange);
 }
 
 .carousel__button {
