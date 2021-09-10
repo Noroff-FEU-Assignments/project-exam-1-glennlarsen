@@ -46,7 +46,7 @@ header {
     font-size: 0.8rem;
   }
   
-  .form-succes {
+  .form-success {
     display: none;
     color: green;
     font-size: 0.8rem;
@@ -77,4 +77,10 @@ header {
     margin: 0 20px;
     color: var(--light-orange);
     font-size: 3em;
+    cursor: pointer;
+  }
+
+  .social-icons_contact>*:hover {
+    color: var(--dark-orange);
+    transition: 0.4s;
   }

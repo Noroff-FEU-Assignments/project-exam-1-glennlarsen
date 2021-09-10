@@ -24,6 +24,15 @@ nav a:hover {
   text-decoration: underline;
 }
 
+.pharagraph-link {
+  font-style: italic;
+  color: var(--dark-orange);
+}
+
+.pharagraph-link:hover {
+  text-decoration: underline;
+}
+
 /*Buttons*/
 
 .cta {
@@ -34,6 +43,7 @@ nav a:hover {
   border: 3px solid var(--dark-orange);
   border-radius: 6px;
   padding: 1em;
+  cursor: pointer;
 }
 
 .cta-white {
@@ -51,6 +61,14 @@ nav a:hover {
 .cta-contact {
   padding: 1em 3em;
 }
+
+.cta:hover{
+  background-color: var(--dark-orange);
+  border-color: var(--dark-orange);
+  color: white;
+  transition: .4s;
+}
+
 
 /*Footer*/
 

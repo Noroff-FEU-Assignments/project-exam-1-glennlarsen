@@ -235,8 +235,14 @@ header {
     margin: 0 5px;
   }
 
+  .social-icons a>*:hover {
+    color: var(--turquoise);
+    transition: 0.4s;
+    transform: scale(1.4);
+  }
 
-/*Error message*/
+
+/*Error and success messages*/
 
 .error {
     color: white;

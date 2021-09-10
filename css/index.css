@@ -54,6 +54,11 @@ header {
   width: 100%;
 }
 
+.carousel__slide:hover .slide__overlay {
+  background: rgba(0,0,0,0.8);
+  transition: .5s;
+}
+
 .slide__overlay {
   position: absolute;
   bottom: 0;
