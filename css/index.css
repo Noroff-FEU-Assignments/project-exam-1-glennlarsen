@@ -138,8 +138,8 @@ header {
 
 /*Featured post 2*/
 
-.featured-post-2, .overlay-box {
-  background: url(../images/mercure/mercure.jpg) center, no-repeat;
+.featured-post-2{
+  background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(../images/mercure/mercure.jpg) center, no-repeat;
   background-size: cover;
   color: white;
   height: 600px;
