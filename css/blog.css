@@ -1,100 +1,75 @@
 /*Header Image*/
 header {
-    background: url(../images/posts/blog.jpg) center, no-repeat;
-    background-size: cover;
-  }
+  background: url(../images/posts/blog.jpg) center, no-repeat;
+  background-size: cover;
+}
 
-  /*Posts*/
+/*Posts*/
 
-  .posts {
-    height: 500px;
-    width: 90%;
-    margin: 0 auto;
-    padding: 40px 0;
-  }
+.posts {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
 
-  .post__list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    position: relative;
-    height: 100%;
-    transition: transform 250ms ease-in;
-  }
+.post__list {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+  gap: 20px;
+  row-gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 
-  .post__list-item {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-  }
-    
-  .post__overlay {
-    position: absolute;
-    bottom: 0;
-    z-index: 100;
-    height: 170px;
-    width: 100%;
-    background: rgba(0,0,0,0.4);
-  }
-  
-  .post__overlay h3, .post__overlay p {
-    position: absolute;
-    z-index: 101;
-    color: white;
-    font-size: 1.6em;
-    margin-left: 20px;
-    top: -6px;
-  }
+.post__list-item {
+  position: relative;
+}
 
-  .post__list-item p {
-    top: 113px;
-    font-size: 1em;
-    color: var(--dark-orange);
-  }
+.post__overlay {
+  position: absolute;
+  bottom: 8px;
+  z-index: 100;
+  height: 170px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
 
-  .post__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: relative;
-  }
+.post__overlay h3,
+.post__overlay p {
+  position: absolute;
+  z-index: 101;
+  color: white;
+  font-size: 1.6em;
+  margin-left: 20px;
+  top: -6px;
+}
 
-  .post__list-item2 {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-  }
-    
-  .post__overlay2 {
-    position: absolute;
-    bottom: 0;
-    z-index: 100;
-    height: 170px;
-    width: 100%;
-    background: rgba(0,0,0,0.4);
-  }
-  
-  .post__overlay2 h3, .post__overlay2 p {
-    position: absolute;
-    z-index: 101;
-    color: white;
-    font-size: 1.6em;
-    margin-left: 20px;
-    top: -6px;
-  }
+.post__list-item p {
+  top: 113px;
+  font-size: 1em;
+  color: var(--dark-orange);
+}
 
-  .post__list-item2 p {
-    top: 113px;
-    font-size: 1em;
-    color: var(--dark-orange);
-  }
+.post__image {
+  height: 500px;
+  object-fit: cover;
+}
 
-  .post__image2 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: relative;
-  }
-  
+.post__list-item:hover {
+  transition: transform 400ms ease-in-out;
+  transform: scale(1.02);
+}
+
+.post__list-item:hover .post__overlay {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/*View more*/
+
+.view-more {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
