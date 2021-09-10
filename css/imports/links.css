@@ -48,6 +48,10 @@ nav a:hover {
   width: 100%;
 }
 
+.cta-contact {
+  padding: 1em 3em;
+}
+
 /*Footer*/
 
 .footer-links {

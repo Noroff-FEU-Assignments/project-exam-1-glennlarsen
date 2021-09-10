@@ -5,6 +5,76 @@ header {
   }
 
   .subscribe__background {
-    background: url(../images/contact/mountain.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(../images/contact/mountain.jpg);
     background-size: cover;
+  }
+
+  /*Contact form*/
+  .contact-form {
+    padding: 0;
+  }
+
+  .form_container>* {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .form_container input, textarea{
+    border: 1px solid var(--grey);
+    border-radius: 8px;
+    padding: 15px;
+    width: 90%;
+  }
+  
+  .form_container textarea {
+    height: 60%;
+    min-height: 180px;
+    margin-bottom: 20px;
+  }
+  
+  .form_container label {
+    font-size: 0.9em;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .form-error {
+    display: none;
+    color: red;
+    font-size: 0.8rem;
+  }
+  
+  .form-succes {
+    display: none;
+    color: green;
+    font-size: 0.8rem;
+  }
+
+  /*Subscribe form*/
+
+  .subscribe_contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subscribe-button_contact {
+    max-width: none;
+    margin-top: 10px;
+  }
+
+  /*Social media*/
+
+  .follow-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .social-icons_contact>* {
+    margin: 0 20px;
+    color: var(--light-orange);
+    font-size: 3em;
   }
