@@ -3,3 +3,8 @@ header {
     background: url(../images/contact/contact.jpg) center, no-repeat;
     background-size: cover;
   }
+
+  .subscribe__background {
+    background: url(../images/contact/mountain.jpg);
+    background-size: cover;
+  }

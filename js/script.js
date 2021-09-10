@@ -1,6 +1,5 @@
-const url = "https://foreverabroad.flopow.eu/wp-json/wp/v2/posts?per_page=13&_embed";
+const url = "https://foreverabroad.flopow.eu/wp-json/wp/v2/posts?per_page=15&_embed";
 
-const body = document.querySelector("body");
 const container = document.querySelector(".container");
 const carousel = document.querySelector(".carousel__track");
 
@@ -28,7 +27,7 @@ getPosts();
 
 function createHtml(post) {
 
- 
+
 
 
 };
