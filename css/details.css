@@ -3,3 +3,23 @@ header {
     background: url(../images/posts/iceland.jpg) center, no-repeat;
     background-size: cover;
   }
+
+section {
+    padding: 0;
+  }
+
+  .blog-section1 h2 {
+    margin-bottom: 5px;
+  }
+
+  .blog-section1 span {
+    font-style: italic;
+  }
+
+  .blog-section1 p:first-of-type,  .blog-section5 p:first-of-type, .comments p {
+    font-weight: bold;
+  }
+
+  .comments {
+    padding-bottom: 40px;
+  }
