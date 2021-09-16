@@ -23,3 +23,12 @@ section {
   .comments {
     padding-bottom: 40px;
   }
+
+.blocks-gallery-grid {
+  list-style: none;
+  padding: 0;
+}
+
+figure {
+  margin: 0;
+}

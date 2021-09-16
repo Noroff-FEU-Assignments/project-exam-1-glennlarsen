@@ -1,9 +1,59 @@
+// const baseUrl = "https://foreverabroad.flopow.eu/wp-json/wp/v2/posts?_embed";
+// const carousel = document.querySelector(".carousel__track");
+// //const container = document.querySelector(".container");
+
+// async function getPosts(url) {
+//     try {
+//         const response = await fetch(url);
+
+//         const post = await response.json();
+
+//         createHtml(post);
+
+//         console.log(Html(post));
+
+
+//     } catch (error) {
+//         container.innerHTML = displayError(
+//             "An error occured when calling the API"
+//         );
+//     }
+// }
+
+// getPosts(baseUrl);
+
+// function createHtml(posts) {
+
+//     carousel.innerHTML = "";
+
+//     posts.forEach(function (post) {
+//         carousel.innerHTML += `
+  
+//     <a href="details.html?id=${post.id}" class="carousel__slide current-slide">
+//     <div class="slide__overlay">
+//     <h3>${post.title.rendered}</h3>
+//     <p>${post.excerpt.rendered}</p>
+//   </div>
+//   <img
+//     class="carousel__image"
+//     src="${post._embedded['wp:featuredmedia']['0'].source_url}"
+//     alt=""
+//   />
+//                 </a>
+                
+//     `;
+//     })
+
+// }
+
+
+
 const track = document.querySelector('.carousel__track');
 const slides = Array.from(track.children);
 const nextButton = document.querySelector('.carousel__button--right');
 const prevButton = document.querySelector('.carousel__button--left');
-const dotsNav = document.querySelector('.carousel__nav');
-const dots = Array.from(dotsNav.children);
+// const dotsNav = document.querySelector('.carousel__nav');
+// const dots = Array.from(dotsNav.children);
 
 const slideWidth = slides[0].getBoundingClientRect().width;
 
@@ -20,10 +70,10 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
     targetSlide.classList.add('current-slide');
 }
 
-const updateDots = (currentDot, targetDot) => {
-    currentDot.classList.remove('current-slide');
-    targetDot.classList.add('current-slide');
-}
+// const updateDots = (currentDot, targetDot) => {
+//     currentDot.classList.remove('current-slide');
+//     targetDot.classList.add('current-slide');
+// }
 
 const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
     if (targetIndex === 0) {
@@ -43,12 +93,12 @@ const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
 prevButton.addEventListener('click', e => {
     const currentSlide = track.querySelector('.current-slide');
     const prevSlide = currentSlide.previousElementSibling;
-    const currentDot = dotsNav.querySelector('.current-slide')
-    const prevDot = currentDot.previousElementSibling;
+    // const currentDot = dotsNav.querySelector('.current-slide')
+    // const prevDot = currentDot.previousElementSibling;
     const prevIndex = slides.findIndex(slide => slide === prevSlide);
 
     moveToSlide(track, currentSlide, prevSlide);
-    updateDots(currentDot, prevDot);
+    // updateDots(currentDot, prevDot);
     hideShowArrows(slides, prevButton, nextButton, prevIndex);
 });
 
@@ -57,32 +107,32 @@ prevButton.addEventListener('click', e => {
 nextButton.addEventListener('click', e => {
     const currentSlide = track.querySelector('.current-slide');
     const nextSlide = currentSlide.nextElementSibling;
-    const currentDot = dotsNav.querySelector('.current-slide')
-    const nextDot = currentDot.nextElementSibling;
+    // const currentDot = dotsNav.querySelector('.current-slide')
+    // const nextDot = currentDot.nextElementSibling;
     const nextIndex = slides.findIndex(slide => slide === nextSlide);
 
     moveToSlide(track, currentSlide, nextSlide);
-    updateDots(currentDot, nextDot);
+    // updateDots(currentDot, nextDot);
     hideShowArrows(slides, prevButton, nextButton, nextIndex);
 })
 
-//When I click the nav indicators, move to that slide
-dotsNav.addEventListener('click', e => {
-    //What indicator was clicked on?
-    const targetDot = e.target.closest('button');
+// //When I click the nav indicators, move to that slide
+// dotsNav.addEventListener('click', e => {
+//     //What indicator was clicked on?
+//     const targetDot = e.target.closest('button');
 
-    if (!targetDot) return;
+//     if (!targetDot) return;
 
-    const currentSlide = track.querySelector('.current-slide');
-    const currentDot = dotsNav.querySelector('.current-slide');
-    const targetIndex = dots.findIndex(dot => dot === targetDot);
-    const targetSlide = slides[targetIndex];
+//     const currentSlide = track.querySelector('.current-slide');
+//     const currentDot = dotsNav.querySelector('.current-slide');
+//     const targetIndex = dots.findIndex(dot => dot === targetDot);
+//     const targetSlide = slides[targetIndex];
 
-    moveToSlide(track, currentSlide, targetSlide);
-    updateDots(currentDot, targetDot);
-    hideShowArrows(slides, prevButton, nextButton, targetIndex);
+//     moveToSlide(track, currentSlide, targetSlide);
+//     updateDots(currentDot, targetDot);
+//     hideShowArrows(slides, prevButton, nextButton, targetIndex);
 
 
 
-})
+// })
 
