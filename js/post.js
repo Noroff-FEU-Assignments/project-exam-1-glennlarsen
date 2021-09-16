@@ -40,7 +40,7 @@ async function getPost() {
       blog.innerHTML = 
       `
       
-      <section class="blog-section1">
+      <section class="blog-section">
       <div class="text_content">
       ${post.content.rendered}
       </div>

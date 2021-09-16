@@ -1,28 +1,22 @@
 /*Header Image*/
 header {
-    background: url(../images/posts/iceland.jpg) center, no-repeat;
-    background-size: cover;
+
   }
 
 section {
     padding: 0;
   }
 
-  .blog-section1 h2 {
+  .blog-section h2 {
     margin-bottom: 5px;
   }
 
-  .blog-section1 span {
+  .info {
     font-style: italic;
+    font-size: .9em;
   }
 
-  .blog-section1 p:first-of-type,  .blog-section5 p:first-of-type, .comments p {
-    font-weight: bold;
-  }
 
-  .comments {
-    padding-bottom: 40px;
-  }
 
 .blocks-gallery-grid {
   list-style: none;
@@ -31,4 +25,29 @@ section {
 
 figure {
   margin: 0;
+}
+
+.reply {
+  margin-top: 40px;
+}
+
+.comments {
+  list-style: none;
+  padding: 0;
+}
+
+.comments img {
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+}
+
+.wp-block-latest-comments__comment-meta>* {
+  padding: 0;
+  margin: 0;
+}
+
+.wp-block-latest-comments__comment {
+  display: flex;
+  flex-direction: row;
 }
