@@ -1,11 +1,12 @@
-const url = "https://foreverabroad.flopow.eu/wp-json/wp/v2/posts?per_page=9&_embed";
+const baseUrl = "https://foreverabroad.flopow.eu/wp-json/wp/v2/posts?_embed";
+const nineResults = baseUrl + "&per_page=9";
 
 const container = document.querySelector(".container");
 const postList = document.querySelector(".post__list");
 const carousel = document.querySelector(".carousel__track");
+const viewMore = document.querySelector("button");
 
-
-async function getPosts() {
+async function getPosts(url) {
   try {
     const response = await fetch(url);
 
@@ -23,14 +24,11 @@ async function getPosts() {
   }
 }
 
+ function createHtml(posts) {
 
+  postList.innerHTML = "";
 
-
-
- function createHtml(post) {
-
-
-post.forEach(function(post){
+posts.forEach(function(post){
   postList.innerHTML += `
 
   <a href="details.html?id=${post.id}">
@@ -46,12 +44,16 @@ post.forEach(function(post){
                 />
                 </li>
               </a>
- 
   `;
 })
 
-
  }
 
-getPosts();
+getPosts(nineResults);
 
+viewMore.onclick = function() {
+  
+  const moreResults = baseUrl + "&per_page=15";
+  getPosts(moreResults);
+  viewMore.style.display = "none";
+}

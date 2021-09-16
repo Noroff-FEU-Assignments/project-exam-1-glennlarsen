@@ -50,6 +50,7 @@ header {
   top: 113px;
   font-size: 1em;
   color: var(--dark-orange);
+  font-weight: bold;
 }
 
 .post__image {
