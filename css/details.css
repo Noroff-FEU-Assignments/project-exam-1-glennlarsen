@@ -1,22 +1,16 @@
-/*Header Image*/
-header {
-
-  }
 
 section {
-    padding: 0;
-  }
+  padding: 0;
+}
 
-  .blog-section h2 {
-    margin-bottom: 5px;
-  }
+.blog-section h2 {
+  margin-bottom: 5px;
+}
 
-  .info {
-    font-style: italic;
-    font-size: .9em;
-  }
-
-
+.info {
+  font-style: italic;
+  font-size: 0.9em;
+}
 
 .blocks-gallery-grid {
   list-style: none;
@@ -42,7 +36,7 @@ figure {
   margin-right: 20px;
 }
 
-.wp-block-latest-comments__comment-meta>* {
+.wp-block-latest-comments__comment-meta > * {
   padding: 0;
   margin: 0;
 }
@@ -50,4 +44,55 @@ figure {
 .wp-block-latest-comments__comment {
   display: flex;
   flex-direction: row;
+}
+
+/*Image modal*/
+
+img {
+  cursor: pointer;
+
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 150px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, .9);
+}
+
+.modal-image {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 800px;
+}
+
+.caption {
+  display: block;
+  margin: auto;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.close:hover {
+  opacity: .5;
+  cursor: pointer;
 }

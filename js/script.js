@@ -13,7 +13,7 @@ async function getPosts(url) {
 
     const post = await response.json();
 
-  createHtml(post);
+    createHtml(post);
 
   } catch (error) {
     container.innerHTML = displayError(
@@ -22,12 +22,12 @@ async function getPosts(url) {
   }
 }
 
- function createHtml(posts) {
+function createHtml(posts) {
 
   postList.innerHTML = "";
 
-posts.forEach(function(post){
-  postList.innerHTML += `
+  posts.forEach(function (post) {
+    postList.innerHTML += `
 
   <a href="details.html?id=${post.id}">
                 <li class="post__list-item">
@@ -43,14 +43,14 @@ posts.forEach(function(post){
                 </li>
               </a>
   `;
-})
+  })
 
- }
+}
 
 getPosts(nineResults);
 
-viewMore.onclick = function() {
-  
+viewMore.onclick = function () {
+
   const moreResults = baseUrl + "&per_page=15";
   getPosts(moreResults);
   viewMore.style.display = "none";
