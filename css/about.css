@@ -1,6 +1,6 @@
 /*Header Image*/
 header {
-    background: url(../images/about/me.jpg) center, no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.127),rgba(0, 0, 0, 0.1)), url(../images/about/me.jpg) center, no-repeat;
     background-size: cover;
   }
 

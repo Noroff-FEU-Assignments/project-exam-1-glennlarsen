@@ -1,59 +1,55 @@
-// const baseUrl = "https://foreverabroad.flopow.eu/wp-json/wp/v2/posts?_embed";
-// const carousel = document.querySelector(".carousel__track");
-// //const container = document.querySelector(".container");
-
-// async function getPosts(url) {
-//     try {
-//         const response = await fetch(url);
-
-//         const post = await response.json();
-
-//         createHtml(post);
-
-//         console.log(Html(post));
+const featuredUrl = "https://foreverabroad.flopow.eu/wp-json/wp/v2/posts?_embed&categories=3";
+const carousel = document.querySelector(".carousel__track");
 
 
-//     } catch (error) {
-//         container.innerHTML = displayError(
-//             "An error occured when calling the API"
-//         );
-//     }
-// }
+async function getPosts(url) {
+    try {
+        const response = await fetch(url);
 
-// getPosts(baseUrl);
+        const post = await response.json();
 
-// function createHtml(posts) {
+        createHtml(post);
 
-//     carousel.innerHTML = "";
 
-//     posts.forEach(function (post) {
-//         carousel.innerHTML += `
+    } catch (error) {
+        carousel.innerHTML = displayError(
+            "An error occured when calling the API"
+        );
+    }
+}
+
+getPosts(featuredUrl);
+
+function createHtml(post) {
+
+    carousel.innerHTML = "";
+
+    post.forEach(function (post) {
+        carousel.innerHTML += `
   
-//     <a href="details.html?id=${post.id}" class="carousel__slide current-slide">
-//     <div class="slide__overlay">
-//     <h3>${post.title.rendered}</h3>
-//     <p>${post.excerpt.rendered}</p>
-//   </div>
-//   <img
-//     class="carousel__image"
-//     src="${post._embedded['wp:featuredmedia']['0'].source_url}"
-//     alt=""
-//   />
-//                 </a>
+    <a href="details.html?id=${post.id}" class="carousel__slide current-slide">
+    <div class="slide__overlay">
+    <h3>${post.title.rendered}</h3>
+    <p>${post.excerpt.rendered}</p>
+  </div>
+  <img
+    class="carousel__image"
+    src="${post._embedded['wp:featuredmedia']['0'].source_url}"
+    alt=""
+  />
+                </a>
                 
-//     `;
-//     })
+    `;
+    })
 
-// }
-
-
-
-const track = document.querySelector('.carousel__track');
+    const track = document.querySelector('.carousel__track');
 const slides = Array.from(track.children);
 const nextButton = document.querySelector('.carousel__button--right');
 const prevButton = document.querySelector('.carousel__button--left');
 // const dotsNav = document.querySelector('.carousel__nav');
 // const dots = Array.from(dotsNav.children);
+
+console.log(slides);
 
 const slideWidth = slides[0].getBoundingClientRect().width;
 
@@ -135,4 +131,10 @@ nextButton.addEventListener('click', e => {
 
 
 // })
+
+
+
+}
+
+
 

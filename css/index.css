@@ -1,6 +1,6 @@
 /*Header Image*/
 header {
-  background: url(../images/home.jpg) center, no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.127),rgba(0, 0, 0, 0.1)), url(../images/home.jpg) center, no-repeat;
   background-size: cover;
 }
 
@@ -14,6 +14,7 @@ header {
 .latest_posts h2 {
   color: var(--turquoise);
   text-align: center;
+  font-size: 2em;
 }
 
 /* Carousel*/
@@ -72,8 +73,8 @@ header {
   position: absolute;
   z-index: 101;
   color: white;
-  font-size: 1.6em;
-  margin-left: 20px;
+  font-size: 1.5em;
+  margin: 20px;
   top: -6px;
 }
 
@@ -93,6 +94,11 @@ header {
   color: var(--turquoise);
   font-size: 30px;
   cursor: pointer;
+}
+
+.carousel__button i:hover {
+  transition: .2s ease-out;
+  transform: scale(1.2);
 }
 
 .carousel__button--left {

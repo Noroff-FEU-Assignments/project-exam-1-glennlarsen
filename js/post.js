@@ -34,7 +34,7 @@ function createHtml(post) {
   document.title = `Forever Abroad | ${post.title.rendered}`;
 
   header.innerHTML = `<h1>${post.title.rendered}</h1>`;
-  header.style.background = `url(${post._embedded['wp:featuredmedia']['0'].source_url}) center, no-repeat`;
+  header.style.background = `linear-gradient(rgba(0, 0, 0, 0.127),rgba(0, 0, 0, 0.1)), url(${post._embedded['wp:featuredmedia']['0'].source_url}) center, no-repeat`;
   header.style.backgroundSize = `cover`;
 
   blog.innerHTML =
@@ -61,6 +61,7 @@ function createHtml(post) {
   const caption = document.querySelector(".caption");
   const close = document.querySelector(".close");
 
+  //Open modal//
   for (let i = 0; i < image.length; i++) {
     image[i].onclick = function () {
       modal.style.display = "block";
@@ -69,6 +70,7 @@ function createHtml(post) {
     }
   }
 
+  //Close Modal//
   modal.onclick = ("click", (e) => {
     if (e.target.classList.contains("modal")) {
       modal.style.display = "none";
