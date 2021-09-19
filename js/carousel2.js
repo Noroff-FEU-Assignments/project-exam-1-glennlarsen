@@ -1,31 +1,33 @@
-const featuredUrl = "https://foreverabroad.flopow.eu/wp-json/wp/v2/posts?_embed&categories=3";
-const carousel = document.querySelector(".carousel__track");
+const baseUrl = "https://foreverabroad.flopow.eu/wp-json/wp/v2/posts?_embed";
+const accUrl = baseUrl + "&categories=17";
+const accommodationCarousel = document.querySelector(".carousel__track2")
 
-
-async function getPosts(url) {
+async function getAccommodation(url) {
     try {
         const response = await fetch(url);
 
         const post = await response.json();
 
-        createHtml(post);
+        console.log(post);
+
+        createHtmlAcco(post);
 
 
     } catch (error) {
-        carousel.innerHTML = displayError(
+        AccommodationCarousel.innerHTML = displayError(
             "An error occured when calling the API"
         );
     }
 }
 
-getPosts(featuredUrl);
+getAccommodation(accUrl);
 
-function createHtml(post) {
+function createHtmlAcco(post) {
 
-    carousel.innerHTML = "";
+    accommodationCarousel.innerHTML = "";
 
     post.forEach(function (post) {
-        carousel.innerHTML += `
+        accommodationCarousel.innerHTML += `
   
     <a href="details.html?id=${post.id}" class="carousel__slide current-slide">
     <div class="slide__overlay">
@@ -42,10 +44,10 @@ function createHtml(post) {
     `;
     })
 
-    const track = document.querySelector('.carousel__track');
+    const track = document.querySelector('.carousel__track2');
 const slides = Array.from(track.children);
-const nextButton = document.querySelector('.carousel__button--right');
-const prevButton = document.querySelector('.carousel__button--left');
+const nextButton = document.querySelector('.carousel__button--right2');
+const prevButton = document.querySelector('.carousel__button--left2');
 // const dotsNav = document.querySelector('.carousel__nav');
 // const dots = Array.from(dotsNav.children);
 
@@ -112,29 +114,4 @@ nextButton.addEventListener('click', e => {
     hideShowArrows(slides, prevButton, nextButton, nextIndex);
 })
 
-// //When I click the nav indicators, move to that slide
-// dotsNav.addEventListener('click', e => {
-//     //What indicator was clicked on?
-//     const targetDot = e.target.closest('button');
-
-//     if (!targetDot) return;
-
-//     const currentSlide = track.querySelector('.current-slide');
-//     const currentDot = dotsNav.querySelector('.current-slide');
-//     const targetIndex = dots.findIndex(dot => dot === targetDot);
-//     const targetSlide = slides[targetIndex];
-
-//     moveToSlide(track, currentSlide, targetSlide);
-//     updateDots(currentDot, targetDot);
-//     hideShowArrows(slides, prevButton, nextButton, targetIndex);
-
-
-
-// })
-
-
-
 }
-
-
-

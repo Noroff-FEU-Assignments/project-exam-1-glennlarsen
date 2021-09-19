@@ -14,6 +14,7 @@
     ></script>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/media.css">
     <title>Forever Abroad | Home</title>
   </head>
   <body>
@@ -23,24 +24,28 @@
           <img src="logo/logo.svg" alt="Forever Abroad logo" />
           <span>Forever Abroad</span>
         </a>
-        <label for="hamburger-menu"
+        <label for="hamburger-menu" class="hamburger-menu"
           ><i class="fas fa-bars" aria-hidden="true"></i
         ></label>
         <input type="checkbox" id="hamburger-menu" />
         <nav>
           <ul>
+            <ul>
             <li>
               <a href="blog.html">Blog Posts</a>
             </li>
             <li>
               <a href="accommodation.html">Accommodation</a>
             </li>
+          </ul>
+          <ul>
             <li>
               <a href="about.html">About Me</a>
             </li>
             <li>
               <a href="contact.html">contact Me</a>
             </li>
+          </ul>
           </ul>
         </nav>
       </div>
@@ -96,13 +101,14 @@
         </section>
 
         <section class="featured-post-1">
-          <div class="text_content">
+          <div class="petra-title">
             <h2>hiking through petra on our way to Amman</h2>
           </div>
+          <div class="flex_content">
           <div class="featured-img">
             <img src="images/petra/petra.jpg" alt="" />
           </div>
-          <div class="text_content">
+          <div>
             <p>
               In dolore quis cow venison drumstick nostrud in jerky enim brisket
               ut. Shank tail irure cow. Frankfurter ground round reprehenderit,
@@ -111,7 +117,8 @@
               consectetur incididunt.
             </p>
           </div>
-          <div class="text_content">
+          </div>
+          <div class="button">
             <a href="details.html?id=121" class="cta">Read more</a>
           </div>
         </section>
@@ -129,43 +136,22 @@
         <section class="accommodation">
           <h2>top 5 accommodation</h2>
           <div class="carousel">
-            <button class="carousel__button carousel__button--left is-hidden">
+            <button class="carousel__button carousel__button--left2 is-hidden">
               <i class="fas fa-chevron-left"></i>
             </button>
             <div class="carousel__track-container">
-              <ul class="carousel__track">
-                <li class="carousel__slide current-slide">
-                  <img
-                    class="carousel__image"
-                    src="images/aluna/aluna zanzibar.jpg"
-                    alt=""
-                  />
-                </li>
-                <li class="carousel__slide">
-                  <img
-                    class="carousel__image"
-                    src="images/accommodation/cancun.jpg"
-                    alt=""
-                  />
-                </li>
-                <li class="carousel__slide">
-                  <img
-                    class="carousel__image"
-                    src="images/accommodation/london.jpg"
-                    alt=""
-                  />
-                </li>
+              <ul class="carousel__track2">
               </ul>
             </div>
-            <button class="carousel__button carousel__button--right">
+            <button class="carousel__button carousel__button--right2">
               <i class="fas fa-chevron-right"></i>
             </button>
 
-            <div class="carousel__nav">
+            <!-- <div class="carousel__nav">
               <button class="carousel__indicator current-slide"></button>
               <button class="carousel__indicator"></button>
               <button class="carousel__indicator"></button>
-            </div>
+            </div> -->
           </div>
         </section>
       </main>
@@ -224,6 +210,7 @@
     </div>
 
     <script src="js/components/displayError.js"></script>
-    <script type="module" src="js/carousel.js"></script>
+    <script type="module" src="js/carousel1.js"></script>
+    <script type="module" src="js/carousel2.js"></script>
   </body>
 </html>

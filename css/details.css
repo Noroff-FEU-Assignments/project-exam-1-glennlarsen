@@ -10,7 +10,10 @@ section {
 
 .info {
   font-style: italic;
-  font-size: 0.9em;
+}
+
+.line {
+  border: 1px solid var(--turquoise);
 }
 
 .blocks-gallery-grid {
@@ -71,6 +74,7 @@ img {
   margin: auto;
   display: block;
   width: 80%;
+  height: auto;
   max-width: 800px;
 }
 

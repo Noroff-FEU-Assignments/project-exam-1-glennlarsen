@@ -51,7 +51,8 @@ section {
 
 img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
 }
 
 .circle {
@@ -66,7 +67,11 @@ img {
 }
 
 .text_content {
-  padding: 20px;
+  padding: 0 20px 20px 20px;
+}
+
+.title_content {
+  padding: 0 20px;
 }
 
 .remove-whitespace {
@@ -173,7 +178,6 @@ textarea {
 .form_container textarea {
   height: 60%;
   min-height: 180px;
-  margin-bottom: 20px;
 }
 
 .form_container label {
@@ -227,6 +231,7 @@ textarea {
 .footer-logo img {
   width: 120px;
   height: 120px;
+  object-fit: inherit;
 }
 
 .subscribe h3 {

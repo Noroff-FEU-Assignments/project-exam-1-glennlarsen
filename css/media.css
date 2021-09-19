@@ -1,6 +1,75 @@
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-image {
-      width: 100%;
-    }
+/*Tablet*/
+@media screen and (min-width: 750px) {
+ /*Home page*/
+
+/*Featured post 1*/
+  .flex_content {
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
   }
+
+  .flex_content>* {
+    flex: 1;
+  }
+
+  .button, .petra-title {
+    position: absolute;
+    left: 50.5%;
+  }
+  .petra-title {
+    top: 7%;
+    max-width: 580px;
+  }
+
+  .button {
+    bottom: 17%;
+  }
+}
+
+/*desktop*/
+@media screen and (min-width: 1150px) {
+  /*Home page*/
+
+/*Navigation*/
+.hamburger-menu {
+  display: none;
+}
+
+nav {
+  display: inline-block;
+  position: static;
+}
+
+nav li a {
+  min-width: 169px;
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 101;
+}
+
+/*Featured post 1*/
+.flex_content {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+
+}
+
+/* 100% Image Width on Smaller Screens for modal */
+@media only screen and (max-width: 700px) {
+  .modal-image {
+    width: 100%;
+  }
+}

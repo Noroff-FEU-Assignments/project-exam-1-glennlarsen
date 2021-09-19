@@ -1,5 +1,5 @@
 
-const baseUrl = "https://foreverabroad.flopow.eu/wp-json/wp/v2/posts?_embed";
+const baseUrl = "https://foreverabroad.flopow.eu/wp-json/wp/v2/posts?_embed&categories=2";
 const nineResults = baseUrl + "&per_page=9";
 
 const container = document.querySelector(".container");
@@ -22,11 +22,14 @@ async function getPosts(url) {
   }
 }
 
+
+
 function createHtml(posts) {
 
   postList.innerHTML = "";
 
   posts.forEach(function (post) {
+
     postList.innerHTML += `
 
   <a href="details.html?id=${post.id}">

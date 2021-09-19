@@ -42,6 +42,8 @@ function createHtml(post) {
       
       <section class="blog-section">
       <div class="text_content">
+      <span class="info">Author: Glenn Larsen | Updated: ${post.modified}</span>
+      <div class="line"></div>
       ${post.content.rendered}
       </div>
     </section>

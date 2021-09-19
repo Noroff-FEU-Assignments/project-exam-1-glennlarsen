@@ -39,7 +39,7 @@ header {
   overflow: hidden;
 }
 
-.carousel__track {
+.carousel__track, .carousel__track2 {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -101,11 +101,11 @@ header {
   transform: scale(1.2);
 }
 
-.carousel__button--left {
+.carousel__button--left, .carousel__button--left2 {
   left: -40px;
 }
 
-.carousel__button--right {
+.carousel__button--right, .carousel__button--right2 {
   right: -40px;
 }
 
@@ -142,11 +142,27 @@ header {
 .featured-post-1 {
   background: url(../patterns/flower-pattern.svg) center, no-repeat;
   background-size: cover;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.flex_content {
+  display: flex;
+  flex-direction: column;
 }
 
 .featured-img {
-  padding: 0 20px;
+  height: 400px;
 }
+
+.button {
+  margin-top: 20px;
+}
+
+
 
 /*Featured post 2*/
 
