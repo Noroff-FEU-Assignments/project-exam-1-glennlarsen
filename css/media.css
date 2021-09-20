@@ -44,14 +44,18 @@
   }
 
   .subscribe {
-    display: flex;
-    flex-direction: column;
     max-width: 40%;
   }
 
   .footer-logo {
     align-items: center;
   }
+
+  /*Contact page*/
+  .subscribe_contact {
+    max-width: 100%;
+  }
+
 }
 
 /*desktop*/
@@ -106,6 +110,12 @@
     height: 550px;
   }
 
+  /*Carousel*/
+
+  .carousel {
+    max-width: 1150px;
+  }
+
   /*Featured post 1*/
   .flex_content {
     max-width: 1150px;
@@ -135,6 +145,22 @@
     width: 1150px;
     margin: 0 auto;
   }
+
+  /*Contact page*/
+
+  .contact-form, .subscribe_contact {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+  .contact-form .text_content {
+    padding: 20px 0;
+  }
+
+  .contact-form {
+    padding: 0 20px;
+}
+
 
 }
 

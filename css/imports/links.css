@@ -67,6 +67,7 @@ nav li a:hover, nav li:hover, nav li:hover a {
 .cta-contact {
   padding: 1em 3em;
   margin-top: 20px;
+  max-width: fit-content;
 }
 
 .cta:hover{
@@ -88,8 +89,10 @@ nav li a:hover, nav li:hover, nav li:hover a {
   color: white;
   font-size: 1.1em;
   line-height: 2.5;
+  font-weight: bold;
 }
 
 .footer-links a:hover {
   text-decoration: underline;
+  color: var(--dark-orange);
 }
