@@ -144,8 +144,13 @@ nav {
   z-index: 100;
 }
 
+nav ul {
+  padding-left: 0;
+}
+
 nav li {
   display: block;
+  height: 100%;
 }
 
 /*Top header*/

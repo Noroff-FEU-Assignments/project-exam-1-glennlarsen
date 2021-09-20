@@ -9,7 +9,6 @@
     align-items: center;
   }
 
-
   /*Featured post 1*/
   .flex_content {
     flex-direction: row;
@@ -24,7 +23,7 @@
   .button,
   .petra-title {
     position: absolute;
-    left: 50.5%;
+    left: 51%;
   }
   .petra-title {
     top: 7%;
@@ -35,42 +34,46 @@
     bottom: 17%;
   }
 
-/*Footer*/
+  /*Footer*/
 
-.top-footer_container {
-  flex-direction: row;
-  max-width: 1150px;
-  justify-content: space-evenly;
+  .top-footer_container {
+    flex-direction: row;
+    max-width: 1150px;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 
-}
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+  }
 
-.subscribe {
-  display: flex;
-  flex-direction: column;
-  max-width: 40%
-}
-
-
+  .footer-logo {
+    align-items: center;
+  }
 }
 
 /*desktop*/
 @media screen and (min-width: 1150px) {
-  /*Home page*/
-
-  /*About me intro*/
-  .intro {
-    max-width: 1150px;
-    margin: 0 auto;
-  }
-
-  .circle img {
-    width: 550px;
-    height: 550px;
+  /*Global*/
+  header {
+    min-height: 500px;
   }
 
   /*Navigation*/
   .hamburger-menu {
     display: none;
+  }
+
+  .nav_bar {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .logo{
+    min-width: fit-content;
   }
 
   nav {
@@ -81,30 +84,58 @@
   .nav-flex {
     display: flex;
     margin: 0;
-    justify-content: space-around;
+    justify-content: flex-end;
   }
 
   .nav-flex ul {
     display: flex;
   }
 
-  .logo {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: 101;
+  /*Home page*/
+
+  /*About me intro*/
+  .intro {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    gap: 40px;
   }
 
-  .logo:hover {
-    transition: inherit;
-    transform: inherit;
+  .circle img {
+    width: 550px;
+    height: 550px;
   }
 
   /*Featured post 1*/
   .flex_content {
     max-width: 1150px;
     margin: 0 auto;
+    padding: 60px 40px;
+    gap: 40px;
   }
+
+  .featured-img {
+    min-height: 450px;
+  }
+
+  .petra-title {
+    top: 19%;
+  }
+
+  .button {
+    bottom: 26%;
+  }
+
+  /*Featured post 2*/
+  .featured-post-2 {
+    height: 800px;
+  }
+
+  .featured-post-2 .text_content {
+    width: 1150px;
+    margin: 0 auto;
+  }
+
 }
 
 /* 100% Image Width on Smaller Screens for modal */

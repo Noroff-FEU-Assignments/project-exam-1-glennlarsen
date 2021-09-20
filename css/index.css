@@ -4,6 +4,11 @@ header {
   background-size: cover;
 }
 
+/*Intro*/
+.intro img {
+  overflow: hidden;
+}
+
 /*Latest Posts*/
 
 .latest_posts {
@@ -174,6 +179,7 @@ header {
   display: flex;
   align-items: center;
 }
+
 
 .featured-post-2 h2, .featured-post-2 p {
   color: white;
