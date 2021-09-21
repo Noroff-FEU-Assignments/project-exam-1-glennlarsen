@@ -1,7 +1,7 @@
 
 
 section {
-  padding: 0;
+  padding-top: 10px;
 }
 
 .blog-section h2 {
@@ -70,12 +70,23 @@ img {
   background-color: rgba(0, 0, 0, .9);
 }
 
+@keyframes open {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 .modal-image {
   margin: auto;
   display: block;
   width: 80%;
   height: auto;
   max-width: 800px;
+  animation-name: open;
+  animation-duration: 0.4s;
 }
 
 .caption {

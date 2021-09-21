@@ -6,12 +6,15 @@ header {
 
   /*Introduction*/
 
-  .introduction {
+  .more_about-me, .introduction {
+    padding: 20px;
     display: flex;
-    flex-direction: column-reverse;
-    padding: 0;
+    flex-direction: column;
   }
 
-  .family-img {
-    padding: 0 20px;
+  .introduction {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
   }
+  

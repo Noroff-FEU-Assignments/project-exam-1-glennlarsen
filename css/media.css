@@ -34,6 +34,35 @@
     bottom: 17%;
   }
 
+  /*About me*/
+  .flex_images {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .introduction {
+    flex-direction: row-reverse;
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+  .more_about-me {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+    /*Contact page*/
+    .subscribe_contact {
+      margin: 0 auto;
+    }
+
+    /*details page*/
+
+    .blog-section {
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+
   /*Footer*/
 
   .top-footer_container {
@@ -49,11 +78,6 @@
 
   .footer-logo {
     align-items: center;
-  }
-
-  /*Contact page*/
-  .subscribe_contact {
-    max-width: 100%;
   }
 
 }
@@ -144,6 +168,12 @@
   .featured-post-2 .text_content {
     width: 1150px;
     margin: 0 auto;
+  }
+
+  /*about me*/
+
+  .introduction {
+    padding-top: 40px;
   }
 
   /*Contact page*/
