@@ -132,6 +132,18 @@ nextButton.addEventListener('click', e => {
 
 // })
 
+//add to the nextButton event listener* 
+// if(currentSlide === slides[slides.length -1]) {
+//         moveToSlide(track, currentSlide, slides[0]);
+//         updateDots(currentDot, dots[0]);
+//     }
+
+//and this for the prevButton event listener*
+// if(currentSlide === slides[0]) {
+//         moveToSlide(track, currentSlide, slides[slides.length -1]);
+//         updateDots(currentDot, dots[dots.length -1]);
+//     }
+
 
 
 }
