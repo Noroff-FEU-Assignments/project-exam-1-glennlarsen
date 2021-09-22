@@ -65,6 +65,7 @@ img {
   border-radius: 50%;
   width: 350px;
   height: 350px;
+  box-shadow: 1px 1px 35px -4px;
 }
 
 .text_content {
@@ -232,7 +233,7 @@ textarea {
 }
 
 .bottom-footer_overlay {
-  background: rgba(242, 192, 162, 0.5);
+  background: rgba(242, 192, 162, 0.8);
 }
 
 .footer-logo {

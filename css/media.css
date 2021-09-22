@@ -35,15 +35,20 @@
   }
 
   /*About me*/
-  .flex_images {
-    display: flex;
-    flex-direction: row;
-  }
 
   .introduction {
-    flex-direction: row-reverse;
     max-width: 1150px;
     margin: 0 auto;
+  }
+
+  .intro-flex {
+    flex-direction: row;
+    gap: 60px;
+    font-size: 20px;
+  }
+
+  .intro-flex>* {
+    flex: 1;
   }
 
   .more_about-me {
@@ -68,7 +73,7 @@
   .top-footer_container {
     flex-direction: row;
     max-width: 1150px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -87,6 +92,23 @@
   /*Global*/
   header {
     min-height: 500px;
+  }
+
+  h1 {
+    font-size: 4em;
+    max-width: 1150px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 25px;
   }
 
   /*Navigation*/
@@ -153,11 +175,11 @@
   }
 
   .petra-title {
-    top: 19%;
+    top: 12%;
   }
 
   .button {
-    bottom: 26%;
+    bottom: 21%;
   }
 
   /*Featured post 2*/
@@ -170,10 +192,14 @@
     margin: 0 auto;
   }
 
+  .featured-post-2 h2, .featured-post-2 p {
+    max-width: 490px;
+}
+
   /*about me*/
 
   .introduction {
-    padding-top: 40px;
+    padding-top: 60px;
   }
 
   /*Contact page*/
