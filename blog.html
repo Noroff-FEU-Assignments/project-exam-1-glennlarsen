@@ -51,6 +51,7 @@
       <main>
         <div class="posts">
           <ul class="post__list">
+            <div class="loader"></div>
           </ul>
         </div>
         <button class="cta view-more">View More</button>
@@ -83,8 +84,9 @@
                 placeholder="Email address"
               />
               <div class="subscribe-button">
-                <a class="cta cta-footer" href="#">Subscribe</a>
+                <button type="submit" class="cta cta-footer cta-footer_subscribe">Subscribe</button>
               </div>
+              <div class="form-success" id="subscribe-success_footer">You have successfully subscribed!</div>
             </div>
           </div>
         </div>
@@ -110,5 +112,6 @@
     </div>
     <script src="js/posts.js"></script>
     <script src="js/components/displayError.js"></script>
+    <script src="js/subscribe.js"></script>
   </body>
 </html>

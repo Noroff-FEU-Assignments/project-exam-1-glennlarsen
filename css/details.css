@@ -95,9 +95,8 @@ img {
 .modal-image {
   margin: auto;
   display: block;
-  width: 80%;
+  width: 100%;
   height: auto;
-  max-width: 800px;
   animation-name: open;
   animation-duration: 0.4s;
 }

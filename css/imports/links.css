@@ -62,6 +62,8 @@ nav li a:hover, nav li:hover, nav li:hover a {
   border: white;
   color: var(--grey);
   width: 100%;
+  padding: 20px;
+  font-size: 17px;
 }
 
 .cta-contact {

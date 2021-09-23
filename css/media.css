@@ -64,7 +64,7 @@
     /*details page*/
 
     .blog-section {
-      max-width: 1150px;
+      max-width: 900px;
       margin: 0 auto;
     }
 
@@ -75,6 +75,11 @@
 
     .blocks-gallery-grid img {
       max-height: 350px;
+    }
+
+    .modal-image {
+      max-width: 60%;
+      max-height: 85%;
     }
 
   /*Footer*/
@@ -218,6 +223,10 @@
     margin: 0 auto;
   }
 
+  .subscribe_contact{
+    max-width: 400px;
+  }
+
   .contact-form .text_content {
     padding: 20px 0;
   }
@@ -229,9 +238,3 @@
 
 }
 
-/* 100% Image Width on Smaller Screens for modal */
-@media only screen and (max-width: 700px) {
-  .modal-image {
-    width: 100%;
-  }
-}
