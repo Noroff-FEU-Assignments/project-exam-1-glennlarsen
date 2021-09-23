@@ -37,12 +37,16 @@ function createHtml(post) {
   header.style.background = `linear-gradient(rgba(0, 0, 0, 0.127),rgba(0, 0, 0, 0.1)), url(${post._embedded['wp:featuredmedia']['0'].source_url}) center, no-repeat`;
   header.style.backgroundSize = `cover`;
 
+  let dateString = `${post.modified}`.slice(0,10);
+  let timeString = `${post.modified}`.slice(11,16);
+  let postUpdated = dateString + ", " + timeString
+
   blog.innerHTML =
     `
       
       <section class="blog-section">
       <div class="text_content">
-      <span class="info">Author: Glenn Larsen | Updated: ${post.modified}</span>
+      <span class="info">Author: Glenn Larsen | Updated: ${postUpdated}</span>
       <div class="line"></div>
       ${post.content.rendered}
       </div>

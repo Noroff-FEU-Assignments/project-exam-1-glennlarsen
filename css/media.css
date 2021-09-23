@@ -68,6 +68,15 @@
       margin: 0 auto;
     }
 
+    .blocks-gallery-grid {
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .blocks-gallery-grid img {
+      max-height: 350px;
+    }
+
   /*Footer*/
 
   .top-footer_container {

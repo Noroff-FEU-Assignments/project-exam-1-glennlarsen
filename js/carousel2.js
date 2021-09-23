@@ -1,6 +1,6 @@
 const baseUrl = "https://foreverabroad.flopow.eu/wp-json/wp/v2/posts?_embed";
 const accUrl = baseUrl + "&categories=17";
-const accommodationCarousel = document.querySelector(".carousel__track2")
+const accommodationCarousel = document.querySelector(".carousel_track2")
 
 async function getAccommodation(url) {
     try {
@@ -29,13 +29,13 @@ function createHtmlAcco(post) {
     post.forEach(function (post) {
         accommodationCarousel.innerHTML += `
   
-    <a href="details.html?id=${post.id}" class="carousel__slide current-slide">
-    <div class="slide__overlay">
+    <a href="details.html?id=${post.id}" class="carousel_slide current-slide">
+    <div class="slide_overlay">
     <h3>${post.title.rendered}</h3>
     <p>${post.excerpt.rendered}</p>
   </div>
   <img
-    class="carousel__image"
+    class="carousel_image"
     src="${post._embedded['wp:featuredmedia']['0'].source_url}"
     alt=""
   />
@@ -44,12 +44,10 @@ function createHtmlAcco(post) {
     `;
     })
 
-    const track = document.querySelector('.carousel__track2');
-const slides = Array.from(track.children);
-const nextButton = document.querySelector('.carousel__button--right2');
-const prevButton = document.querySelector('.carousel__button--left2');
-// const dotsNav = document.querySelector('.carousel__nav');
-// const dots = Array.from(dotsNav.children);
+    const carouselContainer = document.querySelector('.carousel_track2');
+const slides = Array.from(carouselContainer.children);
+const nextButton = document.querySelector('.carousel_button-right2');
+const prevButton = document.querySelector('.carousel_button-left2');
 
 console.log(slides);
 
@@ -62,16 +60,12 @@ const setSlidePosition = (slide, index) => {
 
 slides.forEach(setSlidePosition);
 
-const moveToSlide = (track, currentSlide, targetSlide) => {
-    track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+const moveToSlide = (carouselContainer, currentSlide, targetSlide) => {
+    carouselContainer.style.transform = 'translateX(-' + targetSlide.style.left + ')';
     currentSlide.classList.remove('current-slide');
     targetSlide.classList.add('current-slide');
 }
 
-// const updateDots = (currentDot, targetDot) => {
-//     currentDot.classList.remove('current-slide');
-//     targetDot.classList.add('current-slide');
-// }
 
 const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
     if (targetIndex === 0) {
@@ -87,30 +81,24 @@ const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
 }
 
 
-//When I click left, move slides to the left
+//Move slide to previous
 prevButton.addEventListener('click', e => {
-    const currentSlide = track.querySelector('.current-slide');
+    const currentSlide = carouselContainer.querySelector('.current-slide');
     const prevSlide = currentSlide.previousElementSibling;
-    // const currentDot = dotsNav.querySelector('.current-slide')
-    // const prevDot = currentDot.previousElementSibling;
     const prevIndex = slides.findIndex(slide => slide === prevSlide);
 
-    moveToSlide(track, currentSlide, prevSlide);
-    // updateDots(currentDot, prevDot);
+    moveToSlide(carouselContainer, currentSlide, prevSlide);
     hideShowArrows(slides, prevButton, nextButton, prevIndex);
 });
 
 
-//When I click right, move slides to the right
+//Move slide to next
 nextButton.addEventListener('click', e => {
-    const currentSlide = track.querySelector('.current-slide');
+    const currentSlide = carouselContainer.querySelector('.current-slide');
     const nextSlide = currentSlide.nextElementSibling;
-    // const currentDot = dotsNav.querySelector('.current-slide')
-    // const nextDot = currentDot.nextElementSibling;
     const nextIndex = slides.findIndex(slide => slide === nextSlide);
 
-    moveToSlide(track, currentSlide, nextSlide);
-    // updateDots(currentDot, nextDot);
+    moveToSlide(carouselContainer, currentSlide, nextSlide);
     hideShowArrows(slides, prevButton, nextButton, nextIndex);
 })
 
