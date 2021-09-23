@@ -148,12 +148,27 @@ nav {
 
 nav ul {
   padding-left: 0;
+  animation: rotate 300ms ease-in-out forwards;
+  transform-origin: top center;
 }
 
 nav li {
   display: block;
   height: 100%;
 }
+
+@keyframes rotate {
+  0% {
+      transform: rotateX(-90deg)
+  }
+  70% {
+      transform: rotateX(20deg) 
+  }
+  100% {
+      transform: rotateX(0deg) 
+  }
+}
+
 
 /*Top header*/
 
