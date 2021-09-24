@@ -47,7 +47,7 @@ function createHtml(post) {
     const carouselContainer = document.querySelector('.carousel_track');
     const slides = Array.from(carouselContainer.children);
     let slidesPage = Math.ceil(slides.length);
-    let l = 0;
+    let slide = 0;
     let movePer = 106;
     let maxMove = movePer * (slidesPage - 1);
 
@@ -65,30 +65,30 @@ function createHtml(post) {
     }
 
     let next = () => {
-        l = l + movePer;
-        if (slides == 1) { l = 0; }
+        slide = slide + movePer;
+        if (slides == 1) { slide = 0; }
         for (const i of slides) {
-            if (l > maxMove) { l = l - movePer; }
-            i.style.left = '-' + l + '%';
+            if (slide > maxMove) { slide = slide - movePer; }
+            i.style.left = '-' + slide + '%';
         }
 
     }
 
     let previous = () => {
-        l = l - movePer;
-        if (l <= 0) { l = 0; }
+        slide = slide - movePer;
+        if (slide <= 0) { slide = 0; }
         for (const i of slides) {
             if (slidesPage > 1) {
-                i.style.left = '-' + l + '%';
+                i.style.left = '-' + slide + '%';
             }
         }
     }
 
     const hideShowArrows = () => {
-        if (l === 0) {
+        if (slide === 0) {
             prevButton.classList.add('is-hidden');
             nextButton.classList.remove('is-hidden');
-        } else if (l === maxMove) {
+        } else if (slide === maxMove) {
             prevButton.classList.remove('is-hidden');
             nextButton.classList.add('is-hidden');
         } else {
