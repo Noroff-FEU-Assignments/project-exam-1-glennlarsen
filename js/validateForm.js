@@ -71,3 +71,12 @@ function validateEmail(email) {
     const patternMatches = regEx.test(email);
     return patternMatches;
 }
+
+//this will hide message after 6 seconds
+setInterval(function () {
+    formSucces.style.display = "none";
+    name.style.border = "1px solid var(--grey)";
+    email.style.border = "1px solid var(--grey)";
+    subject.style.border = "1px solid var(--grey)";
+    message.style.border = "1px solid var(--grey)";
+}, 6000)
