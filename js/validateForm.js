@@ -81,6 +81,8 @@ setInterval(function () {
     message.style.border = "1px solid var(--grey)";
 }, 6000)
 
+
+const formElement = document.querySelector("form");
 const formSubmissionHandler = (event) => {
     event.preventDefault();
   
@@ -105,6 +107,6 @@ const formSubmissionHandler = (event) => {
       });
   };
   
-  const formElement = document.querySelector("form");
+  
   
   formElement.addEventListener("submit", formSubmissionHandler);
