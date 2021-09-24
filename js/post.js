@@ -34,7 +34,7 @@ function createHtml(post) {
   document.title = `Forever Abroad | ${post.title.rendered}`;
 
   header.innerHTML = `<h1>${post.title.rendered}</h1>`;
-  header.style.background = `linear-gradient(rgba(0, 0, 0, 0.127),rgba(0, 0, 0, 0.1)), url(${post._embedded['wp:featuredmedia']['0'].source_url}) center, no-repeat`;
+  header.style.background = `linear-gradient(rgba(0, 0, 0, 0.127),rgba(0, 0, 0, 0.4)), url(${post._embedded['wp:featuredmedia']['0'].source_url}) center, no-repeat`;
   header.style.backgroundSize = `cover`;
 
   let dateString = `${post.modified}`.slice(0,10);
