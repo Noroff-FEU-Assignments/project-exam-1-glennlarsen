@@ -30,31 +30,33 @@
   </head>
   <body>
     <div class="container">
-      <div class="nav_bar">
-        <a href="index.html" class="logo">
-          <img src="logo/logo.svg" alt="Forever Abroad logo" />
-          <span>Forever Abroad</span>
-        </a>
-        <label for="hamburger-menu" class="hamburger-menu"
-          ><i class="fas fa-bars" aria-hidden="true"></i
-        ></label>
-        <input type="checkbox" id="hamburger-menu" />
-        <nav>
-          <ul class="nav-flex">
-            <li>
-              <a href="blog.html">Blog Posts</a>
-            </li>
-            <li>
-              <a href="accommodation.html">Accommodation</a>
-            </li>
-            <li>
-              <a href="about.html">About Me</a>
-            </li>
-            <li>
-              <a href="contact.html">contact</a>
-            </li>
-          </ul>
-        </nav>
+      <div class="nav-container" id="navbar">
+        <div class="nav_bar">
+          <a href="index.html" class="logo">
+            <img src="logo/logo.svg" alt="Forever Abroad logo" />
+            <span>Forever Abroad</span>
+          </a>
+          <label for="hamburger-menu" class="hamburger-menu"
+            ><i class="fas fa-bars" aria-hidden="true"></i
+          ></label>
+          <input type="checkbox" id="hamburger-menu" />
+          <nav>
+            <ul class="nav-flex">
+              <li>
+                <a href="blog.html">Blog Posts</a>
+              </li>
+              <li>
+                <a href="accommodation.html">Accommodation</a>
+              </li>
+              <li>
+                <a href="about.html">About Me</a>
+              </li>
+              <li>
+                <a href="contact.html">contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
       <header>
         <h1>Blog Posts</h1>
@@ -125,6 +127,7 @@
         </div>
       </footer>
     </div>
+    <script src="js/hideNav.js"></script>
     <script src="js/posts.js"></script>
     <script src="js/components/displayError.js"></script>
     <script src="js/subscribe.js"></script>
