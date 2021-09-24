@@ -48,7 +48,7 @@ function createHtml(post) {
     const slides = Array.from(carouselContainer.children);
     let slidesPage = Math.ceil(slides.length);
     let l = 0;
-    let movePer = 105.4;
+    let movePer = 105.3;
     let maxMove = movePer * (slidesPage - 1);
 
     // Tablet view	
