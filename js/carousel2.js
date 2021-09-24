@@ -50,7 +50,7 @@ function createHtmlAcco(post) {
     const slides = Array.from(carouselContainer.children);
     let slidesPage = Math.ceil(slides.length);
     let l = 0;
-	let movePer = 105;
+	let movePer = 106;
 	let maxMove = movePer*(slidesPage-1);
 
 
@@ -59,7 +59,7 @@ function createHtmlAcco(post) {
     let desktopView = window.matchMedia("(min-width: 1150px)");
 	if (tabletView.matches)
 	 {
-	 	movePer = 52.5;
+	 	movePer = 53;
 	 	maxMove = movePer*(slidesPage-2);
 	 }  
      //desktop View
