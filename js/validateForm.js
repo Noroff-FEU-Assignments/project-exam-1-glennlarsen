@@ -84,9 +84,9 @@ setInterval(function () {
 const formSubmissionHandler = (event) => {
     event.preventDefault();
   
-    const formElement = event.target,
-      { action, method } = formElement,
-      body = new FormData(formElement);
+    const form = event.target,
+      { action, method } = form,
+      body = new FormData(form);
   
     fetch(action, {
       method,
@@ -106,3 +106,5 @@ const formSubmissionHandler = (event) => {
   };
   
   form.addEventListener("submit", validateForm, formSubmissionHandler);
+
+  console.log(form.addEventListener("submit", validateForm, formSubmissionHandler));
