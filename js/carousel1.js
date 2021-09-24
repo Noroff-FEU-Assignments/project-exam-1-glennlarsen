@@ -55,7 +55,7 @@ function createHtml(post) {
     let tabletView = window.matchMedia("(min-width: 750px)");
     let desktopView = window.matchMedia("(min-width: 1150px)");
     if (tabletView.matches) {
-        movePer = 52.5;
+        movePer = 53;
         maxMove = movePer * (slidesPage - 2);
     }
     //desktop View
