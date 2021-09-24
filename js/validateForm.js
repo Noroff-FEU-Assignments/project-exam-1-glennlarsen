@@ -8,7 +8,7 @@ const subject = document.querySelector("#subject");
 const subjectError = document.querySelector("#subjectError");
 const message = document.querySelector("#message");
 const messageError = document.querySelector("#messageError");
-const formSucces = document.querySelector("#formSucces");
+const formSuccess = document.querySelector("#formSuccess");
 
 function validateForm(event) {
     event.preventDefault();
@@ -47,15 +47,15 @@ function validateForm(event) {
 
     if (checkLength(name.value, 5) === true && validateEmail(email.value) === true &&
         checkLength(subject.value, 15) === true && checkLength(message.value, 25) === true) {
-        formSucces.style.display = "block";
+        formSuccess.style.display = "block";
         form.reset();
     } else {
-        formSucces.style.display = "none";
+        formSuccess.style.display = "none";
     }
 
 
 }
-
+form.addEventListener("submit", validateForm);
 
 function checkLength(value, len) {
     if (value.trim().length > len) {
@@ -73,7 +73,7 @@ function validateEmail(email) {
 
 //this will hide message after 6 seconds
 setInterval(function () {
-    formSucces.style.display = "none";
+    formSuccess.style.display = "none";
     name.style.border = "1px solid var(--grey)";
     email.style.border = "1px solid var(--grey)";
     subject.style.border = "1px solid var(--grey)";
@@ -81,30 +81,7 @@ setInterval(function () {
 }, 6000)
 
 
-const formSubmissionHandler = (event) => {
-    event.preventDefault();
-  
-    const form = event.target,
-      { action, method } = form,
-      body = new FormData(form);
-  
-    fetch(action, {
-      method,
-      body
-    })
-      .then((response) => response.json())
-      .then((response) => {
-        // Determine if the submission is not valid
-        if (isFormSubmissionError(response)) {
-          // Handle the case when there are validation errors
-        }
-        // Handle the happy path
-      })
-      .catch((error) => {
-        // Handle the case when there's a problem with the request
-      });
-  };
-  
-  form.addEventListener("submit", validateForm, formSubmissionHandler);
 
-  console.log(form.addEventListener("submit", validateForm, formSubmissionHandler));
+
+ 
+ 

@@ -6,7 +6,7 @@ window.addEventListener("scroll", function(){
     let scrollTop = window.pageYoffset || document.documentElement.scrollTop;
 
     if(scrollTop > lastScrollTop) {
-        navigation.style.top = "-94px";
+        navigation.style.top = "-486px";
     } else {
         navigation.style.top = "0";
     }

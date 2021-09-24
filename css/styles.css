@@ -98,7 +98,7 @@ img {
   width:100%;
   background-color: white;
   z-index: 1001;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .nav_bar {
@@ -152,18 +152,20 @@ img {
 
 nav {
   display: none;
-  background: white;
   position: absolute;
   width: 100%;
   right: 0px;
   top: 70px;
   z-index: 100;
+  background: rgba(255,255,255, .96);
+  box-shadow: black 3px 19px 20px -8px;
 }
 
 nav ul {
   padding-left: 0;
-  animation: rotate 300ms ease-in-out forwards;
+  animation: rotate 100ms ease-in-out forwards;
   transform-origin: top center;
+  margin-bottom: 0;
 }
 
 nav li {
