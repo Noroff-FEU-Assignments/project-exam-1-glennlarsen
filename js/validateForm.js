@@ -56,7 +56,6 @@ function validateForm(event) {
 
 }
 
-form.addEventListener("submit", validateForm);
 
 function checkLength(value, len) {
     if (value.trim().length > len) {
@@ -82,7 +81,6 @@ setInterval(function () {
 }, 6000)
 
 
-const formElement = document.querySelector("form");
 const formSubmissionHandler = (event) => {
     event.preventDefault();
   
@@ -107,6 +105,4 @@ const formSubmissionHandler = (event) => {
       });
   };
   
-  
-  
-  formElement.addEventListener("submit", formSubmissionHandler);
+  form.addEventListener("submit", validateForm, formSubmissionHandler);
