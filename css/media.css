@@ -9,6 +9,11 @@
     align-items: center;
   }
 
+  /*Carousel*/
+  .carousel_slide {
+    min-width: 50%;
+  }
+
   /*Featured post 1*/
   .flex_content {
     flex-direction: row;
@@ -174,6 +179,10 @@
 
   .carousel {
     max-width: 1150px;
+  }
+
+  .carousel_slide {
+    min-width: 32.23%;
   }
 
   /*Featured post 1*/

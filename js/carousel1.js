@@ -42,67 +42,74 @@ function createHtml(post) {
     })
 
 
-const carouselContainer = document.querySelector('.carousel_track');
-const slides = Array.from(carouselContainer.children);
-const nextButton = document.querySelector('.carousel_button-right');
-const prevButton = document.querySelector('.carousel_button-left');
+    const nextButton = document.querySelector('.carousel_button-right');
+    const prevButton = document.querySelector('.carousel_button-left');
+    const carouselContainer = document.querySelector('.carousel_track');
+    const slides = Array.from(carouselContainer.children);
+    let slidesPage = Math.ceil(slides.length);
+    let l = 0;
+    let movePer = 105;
+    let maxMove = movePer * (slidesPage - 1);
 
-
-console.log(slides);
-
-const slideWidth = slides[0].getBoundingClientRect().width;
-
-console.log(slideWidth);
-
-const setSlidePosition = (slide, index) => {
-    slide.style.left = slideWidth * index + 'px'
-}
-
-
-slides.forEach(setSlidePosition);
-
-const moveToSlide = (carouselContainer, currentSlide, targetSlide) => {
-    carouselContainer.style.transform = 'translateX(-' + targetSlide.style.left + ')';
-    currentSlide.classList.remove('current-slide');
-    targetSlide.classList.add('current-slide');
-}
-
-
-const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
-    if (targetIndex === 0) {
-        prevButton.classList.add('is-hidden');
-        nextButton.classList.remove('is-hidden');
-    } else if (targetIndex === slides.length - 1) {
-        prevButton.classList.remove('is-hidden');
-        nextButton.classList.add('is-hidden');
-    } else {
-        prevButton.classList.remove('is-hidden');
-        nextButton.classList.remove('is-hidden');
+    // Tablet view	
+    let tabletView = window.matchMedia("(min-width: 750px)");
+    let desktopView = window.matchMedia("(min-width: 1150px)");
+    if (tabletView.matches) {
+        movePer = 52.5;
+        maxMove = movePer * (slidesPage - 2);
     }
-}
+    //desktop View
+    if (desktopView.matches) {
+        movePer = 34;
+        maxMove = movePer * (slidesPage - 3);
+    }
 
+    let next = () => {
+        l = l + movePer;
+        if (slides == 1) { l = 0; }
+        for (const i of slides) {
+            if (l > maxMove) { l = l - movePer; }
+            i.style.left = '-' + l + '%';
+        }
 
-//Move slide to previous
-prevButton.addEventListener('click', e => {
-    const currentSlide = carouselContainer.querySelector('.current-slide');
-    const prevSlide = currentSlide.previousElementSibling;
-    const prevIndex = slides.findIndex(slide => slide === prevSlide);
+    }
 
-    moveToSlide(carouselContainer, currentSlide, prevSlide);
-    hideShowArrows(slides, prevButton, nextButton, prevIndex);
-});
+    let previous = () => {
+        l = l - movePer;
+        if (l <= 0) { l = 0; }
+        for (const i of slides) {
+            if (slidesPage > 1) {
+                i.style.left = '-' + l + '%';
+            }
+        }
+    }
 
+    const hideShowArrows = () => {
+        if (l === 0) {
+            prevButton.classList.add('is-hidden');
+            nextButton.classList.remove('is-hidden');
+        } else if (l === maxMove) {
+            prevButton.classList.remove('is-hidden');
+            nextButton.classList.add('is-hidden');
+        } else {
+            prevButton.classList.remove('is-hidden');
+            nextButton.classList.remove('is-hidden');
+        }
+    }
 
-//Move slide to next
-nextButton.addEventListener('click', e => {
-    const currentSlide = carouselContainer.querySelector('.current-slide');
-    const nextSlide = currentSlide.nextElementSibling;
-    const nextIndex = slides.findIndex(slide => slide === nextSlide);
+    //Next slide
+    nextButton.addEventListener('click', e => {
 
-    moveToSlide(carouselContainer, currentSlide, nextSlide);
-    hideShowArrows(slides, prevButton, nextButton, nextIndex);
-})
+        next();
+        hideShowArrows();
+    })
 
+    //Previous slide
+    prevButton.addEventListener('click', e => {
+
+        previous();
+        hideShowArrows();
+    })
 
 }
 

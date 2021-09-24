@@ -47,10 +47,15 @@ function createHtml(posts) {
               </a>
   `;
   })
+  
 
 }
 
 getPosts(nineResults);
+
+setTimeout(function(){
+  viewMore.style.visibility = "visible";
+  },500);
 
 viewMore.onclick = function () {
 
