@@ -3,7 +3,7 @@ const baseUrl = "https://foreverabroad.flopow.eu/wp-json/wp/v2/posts?_embed&cate
 const nineResults = baseUrl + "&per_page=9";
 
 const container = document.querySelector(".container");
-const postList = document.querySelector(".post__list");
+const postList = document.querySelector(".post_list");
 const viewMore = document.querySelector("button");
 
 
@@ -38,13 +38,13 @@ function createHtml(post) {
     
 
   <a href="details.html?id=${post[i].id}">
-                <li class="post__list-item">
-                 <div class="post__overlay">
+                <li class="post_list-item">
+                 <div class="post_overlay">
                     <h3>${post[i].title.rendered}</h3>
                     <p>${post[i].excerpt.rendered}</p>
                   </div>
                   <img
-                  class="post__image"
+                  class="post_image"
                   src="${post[i]._embedded['wp:featuredmedia']['0'].source_url}"
                   alt=""
                 />

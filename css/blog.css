@@ -10,24 +10,24 @@ header {
   width: 90%;
   margin: 0 auto;
   padding: 40px 0;
+  max-width: 1150px;
+  margin: 0 auto;
 }
 
-.post__list {
+.post_list {
   padding: 0;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
   gap: 20px;
   row-gap: 30px;
-  max-width: 1150px;
-  margin: 0 auto;
 }
 
-.post__list-item {
+.post_list-item {
   position: relative;
 }
 
-.post__overlay {
+.post_overlay {
   position: absolute;
   bottom: 8px;
   z-index: 100;
@@ -36,8 +36,8 @@ header {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
 }
 
-.post__overlay h3,
-.post__overlay p {
+.post_overlay h3,
+.post_overlay p {
   position: absolute;
   z-index: 101;
   color: white;
@@ -47,24 +47,24 @@ header {
   line-height: 1.5;
 }
 
-.post__list-item p {
+.post_list-item p {
   top: 113px;
   font-size: 1em;
   color: var(--dark-orange);
   font-weight: bold;
 }
 
-.post__image {
+.post_image {
   height: 500px;
   object-fit: cover;
 }
 
-.post__list-item:hover {
+.post_list-item:hover {
   transition: transform 400ms ease-in-out;
   transform: scale(1.02);
 }
 
-.post__list-item:hover .post__overlay {
+.post_list-item:hover .post_overlay {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
 }
 
@@ -75,4 +75,20 @@ header {
   margin: 0 auto;
   margin-bottom: 40px;
   visibility: hidden;
+}
+
+/*Search and No results*/
+.search {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search input {
+  border-color: var(--dark-orange);
+  width: 100%;
+}
+
+.search-button {
+  margin-left: 5px;
 }
