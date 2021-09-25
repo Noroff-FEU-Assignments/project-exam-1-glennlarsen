@@ -205,6 +205,13 @@ nav li {
     transform: rotateX(0deg);
   }
 }
+.current {
+  background-color: var(--turquoise);
+}
+
+.current a {
+  color: white;
+}
 
 /*Top header*/
 
