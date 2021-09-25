@@ -151,6 +151,7 @@ header {
 
 .featured-img {
   height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 .button {
@@ -172,7 +173,7 @@ header {
 .featured-post-2 h2,
 .featured-post-2 p {
   color: white;
-  font-family: var(--text-pharagraph-and-buttons);
+  font-family: var(--text-heading);
   max-width: 380px;
 }
 

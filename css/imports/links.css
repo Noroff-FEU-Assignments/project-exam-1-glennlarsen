@@ -2,13 +2,13 @@
 a {
   text-decoration: none;
   color: grey;
-  font-family: var(--link), Verdana, Geneva, Tahoma, sans-serif;
+  font-family: var(--text-pharagraph-and-buttons), Verdana, Geneva, Tahoma, sans-serif;
   text-transform: capitalize;
 }
 
 /*Navigation Links*/
 li a {
-  font-family: var(--text-heading), Verdana, Geneva, Tahoma, sans-serif;
+  font-family: var(--text-logo-nav), Verdana, Geneva, Tahoma, sans-serif;
   margin: 0 20px;
   padding: 30px 10px;
   display: block;
@@ -50,6 +50,7 @@ nav li a:hover, nav li:hover, nav li:hover a {
   border-radius: 6px;
   padding: 1em;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .cta-white {

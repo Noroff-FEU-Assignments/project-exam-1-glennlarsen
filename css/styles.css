@@ -22,9 +22,12 @@ body {
 h1,
 h2,
 h3,
-h4,
-.logo {
+h4 {
   font-family: var(--text-heading), Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo {
+  font-family: var(--text-logo-nav), Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1 {
@@ -42,7 +45,9 @@ h4 {
   color: white;
 }
 
-h2::first-letter, h3::first-letter, h4::first-letter {
+h2::first-letter,
+h3::first-letter,
+h4::first-letter {
   text-transform: uppercase;
 }
 
@@ -89,13 +94,29 @@ img {
   margin-top: 45px;
 }
 
+.to-top {
+  position: fixed;
+  font-size: 40px;
+  bottom: 60px;
+  right: 10px;
+  color: var(--dark-orange);
+  z-index: 1200;
+  display: none;
+  transition: 0.4s;
+}
+
+.to-top:hover {
+  transform: scale(1.1);
+  color: rgba(0, 0, 0, 0.9);
+}
+
 /*Navigation bar*/
 
 .nav-container {
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: white;
   z-index: 1001;
   transition: 0.4s;
@@ -157,7 +178,7 @@ nav {
   right: 0px;
   top: 70px;
   z-index: 100;
-  background: rgba(255,255,255, .98);
+  background: rgba(255, 255, 255, 0.98);
   box-shadow: black 3px 19px 20px -8px;
 }
 
@@ -175,16 +196,15 @@ nav li {
 
 @keyframes rotate {
   0% {
-      transform: rotateX(-90deg)
+    transform: rotateX(-90deg);
   }
   70% {
-      transform: rotateX(20deg) 
+    transform: rotateX(20deg);
   }
   100% {
-      transform: rotateX(0deg) 
+    transform: rotateX(0deg);
   }
 }
-
 
 /*Top header*/
 
@@ -194,6 +214,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-top: 80px;
 }
 
 /*Contact forms*/
@@ -211,7 +232,8 @@ header {
 }
 
 .form_container input,
-textarea, .search input {
+textarea,
+.search input {
   border: 1px solid var(--grey);
   border-radius: 8px;
   padding: 15px;
@@ -254,10 +276,10 @@ textarea, .search input {
 
 @keyframes spin {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 

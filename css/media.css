@@ -118,6 +118,7 @@
   /*Global*/
   header {
     min-height: 500px;
+    margin-top: 94px;
   }
 
   h1 {
@@ -135,6 +136,9 @@
 
   h3 {
     font-size: 25px;
+  }
+  .to-top {
+    right: 60px;
   }
 
   /*Navigation*/

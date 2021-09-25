@@ -1,7 +1,8 @@
 :root {
-    --text-pharagraph-and-buttons: "verdana";
-    --text-heading: "Optimus Princeps SemiBold";
+    --text-pharagraph-and-buttons: "helvetica";
+    --text-heading: "park-lane";
     --text-link: "Optimus Princeps";
+    --text-logo-nav: "Optimus Princeps SemiBold";
     --dark-orange: #F25F29;
     --red: #8C3623;
     --light-orange: #F2C0A2;
