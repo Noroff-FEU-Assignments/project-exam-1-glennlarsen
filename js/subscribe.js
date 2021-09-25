@@ -26,5 +26,3 @@ setInterval(function () {
 
 
 
-
-

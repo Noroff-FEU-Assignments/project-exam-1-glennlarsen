@@ -8,7 +8,7 @@ const subject = document.querySelector("#subject");
 const subjectError = document.querySelector("#subjectError");
 const message = document.querySelector("#message");
 const messageError = document.querySelector("#messageError");
-const formSuccess = document.querySelector("#formSuccess");
+const formSucces = document.querySelector("#formSuccess");
 
 function validateForm(event) {
     event.preventDefault();
@@ -47,10 +47,10 @@ function validateForm(event) {
 
     if (checkLength(name.value, 5) === true && validateEmail(email.value) === true &&
         checkLength(subject.value, 15) === true && checkLength(message.value, 25) === true) {
-        formSuccess.style.display = "block";
+        formSucces.style.display = "block";
         form.reset();
     } else {
-        formSuccess.style.display = "none";
+        formSucces.style.display = "none";
     }
 
 
@@ -73,7 +73,7 @@ function validateEmail(email) {
 
 //this will hide message after 6 seconds
 setInterval(function () {
-    formSuccess.style.display = "none";
+    formSucces.style.display = "none";
     name.style.border = "1px solid var(--grey)";
     email.style.border = "1px solid var(--grey)";
     subject.style.border = "1px solid var(--grey)";
