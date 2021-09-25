@@ -41,6 +41,7 @@ figure img {
 .comments {
   list-style: none;
   padding: 0;
+  font-weight: bold;
 }
 
 .comments img {
