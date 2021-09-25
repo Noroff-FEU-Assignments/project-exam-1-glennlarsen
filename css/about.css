@@ -1,49 +1,50 @@
 /*Header Image*/
 header {
-    background: linear-gradient(rgba(0, 0, 0, 0.127),rgba(0, 0, 0, 0.1)), url(../images/about/me.jpg) center, no-repeat;
-    background-size: cover;
-  }
+  background: linear-gradient(rgba(0, 0, 0, 0.127), rgba(0, 0, 0, 0.1)),
+    url(../images/about/me.jpg) center, no-repeat;
+  background-size: cover;
+}
 
-  /*Introduction*/
+/*Introduction*/
 
-  .more_about-me, .introduction {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-  }
+.more_about-me,
+.introduction {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
 
-  .introduction {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
+.introduction {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 
-  .introduction h2 {
-    text-align: center;
-  }
+.introduction h2 {
+  text-align: center;
+}
 
-  /*Table*/
+/*Table*/
 
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
 
-    tr {
-    border-top: 1px solid rgba(80, 80, 80, .3);
-  }
+tr {
+  border-top: 1px solid rgba(80, 80, 80, 0.3);
+}
 
-  tr>* {
-    padding: 15px 0;
-  }
+tr > * {
+  padding: 15px 0;
+}
 
-  tr td:first-child {
-    font-weight: bold;
-  }
+tr td:first-child {
+  font-weight: bold;
+}
 
-  .intro-flex {
-    display: flex;
-    flex-direction: column;
-    font-size: 17px;
-  }
-  
+.intro-flex {
+  display: flex;
+  flex-direction: column;
+  font-size: 17px;
+}

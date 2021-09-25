@@ -1,48 +1,50 @@
 /*Header Image*/
 header {
-    background: linear-gradient(rgba(0, 0, 0, 0.127),rgba(0, 0, 0, 0.5)), url(../images/contact/contact.jpg) center, no-repeat;
-    background-size: cover;
-  }
+  background: linear-gradient(rgba(0, 0, 0, 0.127), rgba(0, 0, 0, 0.5)),
+    url(../images/contact/contact.jpg) center, no-repeat;
+  background-size: cover;
+}
 
-  .subscribe__background {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(../images/contact/mountain.jpg);
-    background-size: cover;
-    background-position: center;
-  }
+.subscribe__background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)),
+    url(../images/contact/mountain.jpg);
+  background-size: cover;
+  background-position: center;
+}
 
-  /*Contact form*/
-  .contact-form {
-    padding: 0;
-  }
+/*Contact form*/
+.contact-form {
+  padding: 0;
+}
 
-  /*Subscribe form*/
+/*Subscribe form*/
 
-  .subscribe_contact {
-    display: flex;
-    flex-direction: column;
-  }
+.subscribe_contact {
+  display: flex;
+  flex-direction: column;
+}
 
-  .subscribe-button_contact {
-    margin-top: 10px;
-  }
+.subscribe-button_contact {
+  margin-top: 10px;
+}
 
-  /*Social media*/
+/*Social media*/
 
-  .follow-me {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-  }
+.follow-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
 
-  .social-icons_contact>* {
-    margin: 0 20px;
-    color: var(--light-orange);
-    font-size: 3em;
-    cursor: pointer;
-  }
+.social-icons_contact > * {
+  margin: 0 20px;
+  color: var(--light-orange);
+  font-size: 3em;
+  cursor: pointer;
+}
 
-  .social-icons_contact>*:hover {
-    color: var(--dark-orange);
-    transition: 0.4s;
-  }
+.social-icons_contact > *:hover {
+  color: var(--dark-orange);
+  transition: 0.4s;
+}

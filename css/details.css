@@ -1,5 +1,3 @@
-
-
 section {
   padding-top: 10px;
 }
@@ -8,7 +6,7 @@ section {
   margin-bottom: 5px;
 }
 
-.blog-section h2:nth-of-type(n+2) {
+.blog-section h2:nth-of-type(n + 2) {
   margin-top: 50px;
 }
 
@@ -69,7 +67,6 @@ figure img {
 
 img {
   cursor: pointer;
-
 }
 
 .modal {
@@ -82,7 +79,7 @@ img {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, .9);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 @keyframes open {
@@ -123,6 +120,6 @@ img {
 }
 
 .close:hover {
-  opacity: .5;
+  opacity: 0.5;
   cursor: pointer;
 }

@@ -59,8 +59,8 @@ header {
 
 .carousel_slide {
   position: relative;
-	left: 0;
-	transition: 0.5s;
+  left: 0;
+  transition: 0.5s;
   min-width: 100%;
 }
 
@@ -126,7 +126,6 @@ header {
 .carousel_button img {
   width: 15px;
 }
-
 
 .is-hidden {
   display: none;
