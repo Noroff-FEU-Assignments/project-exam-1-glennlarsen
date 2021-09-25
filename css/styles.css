@@ -2,10 +2,6 @@
 @import "imports/variables.css";
 
 /* Global*/
-@font-face {
-  font-family: "Optimus Princeps";
-  src: url("../fonts/OptimusPrinceps.ttf") format("truetype");
-}
 
 @font-face {
   font-family: "Optimus Princeps SemiBold";
@@ -79,10 +75,6 @@ img {
 
 .text_content {
   padding: 0 20px 20px 20px;
-}
-
-.title_content {
-  padding: 0 20px;
 }
 
 .remove-whitespace {
@@ -205,6 +197,8 @@ nav li {
     transform: rotateX(0deg);
   }
 }
+
+/*Active navigation element*/
 .current {
   background-color: var(--turquoise);
 }
@@ -385,7 +379,7 @@ input::placeholder {
   transform: scale(1.4);
 }
 
-/*Error and success messages*/
+/*Error message*/
 
 .error {
   color: white;
