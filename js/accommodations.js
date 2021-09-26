@@ -26,10 +26,10 @@ function createHtml(post) {
 
   postList.innerHTML = "";
 
-  for(let i = 0; i < post.length; i++) {
-    
+  for (let i = 0; i < post.length; i++) {
+
     if (post.length < 10) {
-        viewMore.style.display = "none";
+      viewMore.style.display = "none";
     } else {
       viewMore.style.display = "block";
     }
@@ -52,7 +52,7 @@ function createHtml(post) {
               </a>
   `;
 
-}
+  }
 
 }
 

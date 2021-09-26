@@ -49,15 +49,15 @@ function createHtml(posts) {
             
   `;
   })
-  
+
 
 }
 
 getPosts(nineResults);
 
-setTimeout(function(){
+setTimeout(function () {
   viewMore.style.visibility = "visible";
-  },500);
+}, 500);
 
 viewMore.onclick = function () {
   const noResults = document.querySelector(".no-results");
@@ -67,12 +67,12 @@ viewMore.onclick = function () {
   noResults.style.display = "none";
 }
 
-searchButton.onclick = function() {
+searchButton.onclick = function () {
   const searchInput = document.querySelector("#search-input").value;
   const newUrl = baseUrl + `&search=${searchInput}`;
   getPosts(newUrl);
-    viewMore.style.display = "block";
-    viewMore.innerHTML = "View All";
+  viewMore.style.display = "block";
+  viewMore.innerHTML = "View All";
 }
 
 
