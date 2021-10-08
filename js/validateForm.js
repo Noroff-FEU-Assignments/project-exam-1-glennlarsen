@@ -60,9 +60,9 @@ form.addEventListener("submit", validateForm);
 function checkLength(value, len) {
     if (value.trim().length > len) {
         return true;
-    } else {
+    } else
         return false;
-    }
+}
 }
 
 function validateEmail(email) {
