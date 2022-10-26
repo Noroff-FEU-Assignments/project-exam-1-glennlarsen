@@ -34,7 +34,7 @@ The content for the website is stored on a WordPress installation used as a Head
 ### Installing
 
 1. Clone the repo:
-   `git clone https://github.com/glennlarsen/project-exam-1-glennlarsen-portfolio-1.git`
+   `git clone https://github.com/Noroff-FEU-Assignments/project-exam-1-glennlarsen.git`
    Clones the repo to your choosen destination.
 
 ### Running
@@ -57,4 +57,3 @@ Contributions to the project are very much appreaciated. To contribute please op
 
 [My LinkedIn Page](https://www.linkedin.com/in/glenn-larsen-288173242/)\
 [My Portfolio](https://glennportfolio.site)
-
